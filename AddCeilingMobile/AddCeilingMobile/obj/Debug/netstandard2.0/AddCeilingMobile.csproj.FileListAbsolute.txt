@@ -1,0 +1,16 @@
+C:\Code\AddCeiling\AddCeilingMobile\AddCeilingMobile\bin\Debug\netstandard2.0\AddCeilingMobile.deps.json
+C:\Code\AddCeiling\AddCeilingMobile\AddCeilingMobile\bin\Debug\netstandard2.0\AddCeilingMobile.dll
+C:\Code\AddCeiling\AddCeilingMobile\AddCeilingMobile\bin\Debug\netstandard2.0\ref\AddCeilingMobile.dll
+C:\Code\AddCeiling\AddCeilingMobile\AddCeilingMobile\bin\Debug\netstandard2.0\AddCeilingMobile.pdb
+C:\Code\AddCeiling\AddCeilingMobile\AddCeilingMobile\obj\Debug\netstandard2.0\AddCeilingMobile.csproj.AssemblyReference.cache
+C:\Code\AddCeiling\AddCeilingMobile\AddCeilingMobile\obj\Debug\netstandard2.0\AddCeilingMobile.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\AddCeiling\AddCeilingMobile\AddCeilingMobile\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Code\AddCeiling\AddCeilingMobile\AddCeilingMobile\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Code\AddCeiling\AddCeilingMobile\AddCeilingMobile\obj\Debug\netstandard2.0\Pages\BuildPage.xaml.g.cs
+C:\Code\AddCeiling\AddCeilingMobile\AddCeilingMobile\obj\Debug\netstandard2.0\AddCeilingMobile.AssemblyInfoInputs.cache
+C:\Code\AddCeiling\AddCeilingMobile\AddCeilingMobile\obj\Debug\netstandard2.0\AddCeilingMobile.AssemblyInfo.cs
+C:\Code\AddCeiling\AddCeilingMobile\AddCeilingMobile\obj\Debug\netstandard2.0\AddCeilingMobile.csproj.CoreCompileInputs.cache
+C:\Code\AddCeiling\AddCeilingMobile\AddCeilingMobile\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Code\AddCeiling\AddCeilingMobile\AddCeilingMobile\obj\Debug\netstandard2.0\AddCeilingMobile.dll
+C:\Code\AddCeiling\AddCeilingMobile\AddCeilingMobile\obj\Debug\netstandard2.0\ref\AddCeilingMobile.dll
+C:\Code\AddCeiling\AddCeilingMobile\AddCeilingMobile\obj\Debug\netstandard2.0\AddCeilingMobile.pdb

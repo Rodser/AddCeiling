@@ -1,0 +1,1 @@
+C:\Code\AddCeiling\AddCeilingMobile\AddCeilingMobile.UWP\AddCeilingMobile.UWP.csproj;x64

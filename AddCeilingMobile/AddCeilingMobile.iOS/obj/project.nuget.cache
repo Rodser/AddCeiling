@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "7CvzNQa0nOkS/PuP3T9ea///Z8OpxnrUXA5LWrmexi+0ahBbBSKD3WPO3EFv7lnYhPCjrnqdal0cYOdT0tlK8g==",
+  "success": true,
+  "projectFilePath": "C:\\Code\\AddCeiling\\AddCeilingMobile\\AddCeilingMobile.iOS\\AddCeilingMobile.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Rodik\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Rodik\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\Rodik\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
