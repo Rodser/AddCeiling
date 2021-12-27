@@ -6,7 +6,7 @@ namespace AddCeilingMobile
 {
     internal class Segment 
     {
-        private PointCollection _points;
+        private readonly PointCollection _points;
 
         public Segment(PointCollection points, double distance, Angle angle)
         {

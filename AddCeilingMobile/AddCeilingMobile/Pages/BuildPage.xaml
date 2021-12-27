@@ -9,9 +9,9 @@
     <ContentPage.Content>
         <ScrollView Padding="10">
             <StackLayout>
-                <Grid HeightRequest="400" Margin="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Grid HeightRequest="400" Margin="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
                     <Frame BackgroundColor="Gray" >
-                        <Polygon Points="{Binding Points}" Aspect="Uniform" Margin="20"  Fill="#CCCCFF" StrokeThickness="3" Stroke="Yellow"/>
+                        <Polygon x:Name="pol" Points="{Binding Points}" Aspect="Uniform" Margin="20"  Fill="#CCCCFF" StrokeThickness="3" Stroke="Yellow"/>
                     </Frame>
                 </Grid>
                 <StackLayout>

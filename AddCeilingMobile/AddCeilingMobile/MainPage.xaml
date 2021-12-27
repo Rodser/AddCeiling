@@ -5,36 +5,24 @@
              x:Class="AddCeilingMobile.MainPage">
 
     <ContentPage.BindingContext>
-        <vm:BuildViewModel/>
+        <vm:ListViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <ScrollView Padding="10">
-            <StackLayout>
-                <Grid HeightRequest="400" Margin="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                    <Frame BackgroundColor="Gray" HasShadow="True"  >
-                        <Polygon Points="{Binding Points}" Aspect="Uniform" Margin="20"  Fill="#CCCCFF" StrokeThickness="3" Stroke="Yellow"/>
-                    </Frame>
-                </Grid>
-                <StackLayout>
-                    <Frame BackgroundColor="Gray" Margin="10">
-                        <StackLayout Orientation="Horizontal" Spacing="5" VerticalOptions="Center">
-                            <Picker ItemsSource="{Binding Angles}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="#CCCCFF" Title="Angle" IsEnabled="{Binding HasPickerActive}" SelectedItem="{Binding OnSelectAngle}" VerticalOptions="Center" HorizontalOptions="Center"/>
-                            <Entry Text="{Binding EntrySegment}" BackgroundColor="#CCCCFF" Placeholder="cm" MinimumWidthRequest="60" Keyboard="Numeric" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
-                            <Button Text="ADD" Command="{Binding AddSegment}" VerticalOptions="Center" HorizontalOptions="EndAndExpand"/>
-                            <Button Text="Clear" Command="{Binding OnClear}" VerticalOptions="Center" HorizontalOptions="EndAndExpand"/>
+            <ListView ItemsSource="{Binding Ceilings}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Grid HeightRequest="400" Margin="10" HorizontalOptions="Fill">
+                                <Frame BackgroundColor="Gray" HasShadow="True" HorizontalOptions="FillAndExpand" >
+                                    <Polygon Points="{Binding Points}" Aspect="Uniform" Margin="20"  Fill="#CCCCFF" StrokeThickness="3" Stroke="Yellow"/>
+                                </Frame>
+                            </Grid>
+                            
                         </StackLayout>
-                    </Frame>
-                    <Frame BackgroundColor="Gray">
-                        <ListView ItemsSource="{Binding Segments}">
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    <TextCell Text="{Binding Description}" TextColor="White" Detail="{Binding Distance}"/>
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
-                    </Frame>
-                </StackLayout>
-            </StackLayout>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </ScrollView>
     </ContentPage.Content>
 

@@ -13,8 +13,7 @@ namespace AddCeilingMobile
     internal class BuildViewModel : INotifyPropertyChanged
     {
         private readonly Repository _repository;
-        private Angle _selectedAngle;
-        private Angle _selectedAngleDefault;
+        private readonly string _selectedAngleDefault;
         private string _onSelectAngle;
         private bool _hasPickerActive;
 
@@ -30,23 +29,10 @@ namespace AddCeilingMobile
                 if (value != _onSelectAngle)
                 {
                     _onSelectAngle = value;
-                    _selectedAngle = new Angle(double.Parse(value));
                     OnPropertyChanged(OnSelectAngle);
                 }
             }
         }
-        //public Angle SelectedAngle
-        //{
-        //    get => _selectedAngle; 
-        //    set
-        //    {
-        //        if (value != _selectedAngle)
-        //        {
-        //            _selectedAngle = value;
-        //            OnPropertyChanged(nameof(SelectedAngle));
-        //        }
-        //    }
-        //}
         public double EntrySegment { get; set; }
         public ObservableCollection<Segment> Segments { get; set; }
         public ICommand AddSegment { get; set; }
@@ -56,11 +42,13 @@ namespace AddCeilingMobile
         public BuildViewModel()
         {
             _repository = new Repository();
-            Points = new PointCollection();
-            Points.Add(Point.Zero);
+            Points = new PointCollection
+            {
+                Point.Zero
+            };
             Angles = GetListAngels(_repository.DefaultAngles);
-            _selectedAngleDefault = new Angle(0.00);
-            _selectedAngle = _selectedAngleDefault;
+            _selectedAngleDefault = "0";
+            OnSelectAngle = _selectedAngleDefault;
             Segments = new ObservableCollection<Segment>();
             HasPickerActive = false;
             AddSegment = new Command(AddSegmentPoint);
@@ -71,7 +59,7 @@ namespace AddCeilingMobile
         {
             Points.Clear();
             Segments.Clear();
-            _selectedAngle = _selectedAngleDefault;
+            OnSelectAngle = _selectedAngleDefault;
             Points.Add(Point.Zero);
             HasPickerActive = false;
         }
@@ -88,10 +76,7 @@ namespace AddCeilingMobile
 
         private void AddSegmentPoint(object sender)
         {
-            //if(_selectedAngle is null)
-            //    return;
-            var angle = _selectedAngle;
-            Debug.Print(_selectedAngle.Degrees.ToString());
+            var angle = new Angle(double.Parse(OnSelectAngle??"0"));
             if (Segments.Count > 0)
             {
                 angle.SetValueDegrees(Segments[Segments.Count-1].Angle);
@@ -104,7 +89,7 @@ namespace AddCeilingMobile
             HasPickerActive = true;
         }
 
-        internal Point CreatePoint(double distance, Angle angle)
+        private Point CreatePoint(double distance, Angle angle)
         {
             var newX = distance * Math.Cos(angle.Radian) + Points[Points.Count-1].X;
             var newY = distance * Math.Sin(angle.Radian) + Points[Points.Count-1].Y;

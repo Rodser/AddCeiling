@@ -8,7 +8,7 @@ namespace AddCeilingMobile
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new BuildPage();
         }
 
         protected override void OnStart()
